@@ -1,2 +1,2 @@
-# Python_1
+# Python_learning
 Some simple and basic logical operation
