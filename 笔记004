@@ -1,1 +1,33 @@
-print函数
+# print函数的应用：
+for a in range(5):
+    print(a)
+'''
+0
+1
+2
+3
+4
+'''
+
+# end关键字:相当于在每一次输出的内容后面带上一个东西，输出在同一行
+for a in range(5):
+  print(a, end='/')  # 0/1/2/3/4/
+  
+# sep参数:输出的内容中间插入一个东西，输出在同一行
+a = 0
+b = 1
+c = 6
+print(a, b, c, sep='o')  # 0o1o6
+
+# 针对序列的内置函数:
+# sorted(iterable, key=None, reverse=False) 对所有可迭代的对象进行排序操作
+x = [-8, 99, 3, 7, 83]
+print(sorted(x))  # 升序排列（默认）
+print(sorted(x, reverse=True))  # 降序排列
+
+# 其中key=lambda是选取字典dic里的一个参数进行排序
+t = ({'age': 19, 'name': 'a'}, {'age': 25, 'name': 'b'}, {'age': 16, 'name': 'c'})
+x = sorted(t, key=lambda m: m["age"], reverse=False)  # 按照age里面的元素进行降序排列
+print(x)  # [{'age': 16, 'name': 'c'}, {'age': 19, 'name': 'a'}, {'age': 25, 'name': 'b'}]
+ 
+# reversed(seq) 函数返回一个反转的迭代器
