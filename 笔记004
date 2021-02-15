@@ -31,3 +31,14 @@ x = sorted(t, key=lambda m: m["age"], reverse=False)  # 按照age里面的元素
 print(x)  # [{'age': 16, 'name': 'c'}, {'age': 19, 'name': 'a'}, {'age': 25, 'name': 'b'}]
  
 # reversed(seq) 函数返回一个反转的迭代器
+list(reversed(x))  # 要在reversed函数前加上一个list(不论原本序列是不是列表[])，否则返回的是储存的位置
+例如：
+x = [-8, 99, 3, 7, 83]  # 一个列表
+print(reversed(x))  # <list_reverseiterator object at 0x000001E5D5C86790>
+print(list(reversed(x)))  # [83, 7, 3, 99, -8]
+
+# enumerate(sequence， [start=0]) 其中sequence为索引序列(列表、元组或字符串均可)
+seasons = ('Spring', 'Summer', 'Fall', 'Winter')  # 元组
+a = enumerate(seasons, 1)  # 从1开始枚举
+print(tuple(a))  # ((1, 'Spring'), (2, 'Summer'), (3, 'Fall'), (4, 'Winter')) 输出类型为元组
+
